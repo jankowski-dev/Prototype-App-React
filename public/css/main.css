@@ -1,0 +1,522 @@
+/*
+
+CSS Style v. 1.0.0
+01 September 2022
+Author W. Jankowski
+https://stendale.site
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0 12px;
+}
+
+.red {
+  background: red;
+}
+
+.green {
+  background: green;
+}
+
+.blue {
+  background: blue;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+div,
+span,
+article,
+main,
+menu,
+header,
+aside,
+blockquote {
+  font-family: "Exo 2", sans-serif;
+}
+
+/* Основные отступы */
+
+.p-top-5 {
+  padding-top: 5px;
+}
+
+.p-top-10 {
+  padding-top: 10px;
+}
+
+.p-top-20 {
+  padding-top: 20px;
+}
+
+.p-top-30 {
+  padding-top: 30px;
+}
+
+.p-top-40 {
+  padding-top: 40px;
+}
+
+.p-top-50 {
+  padding-top: 50px;
+}
+
+.p-bot-5 {
+  padding-bottom: 5px;
+}
+
+.p-bot-10 {
+  padding-bottom: 10px;
+}
+
+.p-bot-20 {
+  padding-bottom: 20px;
+}
+
+.p-bot-30 {
+  padding-bottom: 30px;
+}
+
+.p-bot-40 {
+  padding-bottom: 40px;
+}
+
+.p-bot-50 {
+  padding-bottom: 50px;
+}
+
+/* Основные цвета фонов */
+
+.bg-black {
+  background-color: rgba(49, 49, 49, 1);
+}
+
+.bg-white {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.bg-blue {
+  background-color: rgba(2, 90, 194, 1);
+}
+
+.bg-gray {
+  background-color: rgba(233, 233, 233, 1);
+}
+
+.bg-light-gray {
+  background: rgba(241, 241, 241, 1);
+}
+
+.bg-light-blue {
+  background: rgba(235, 239, 255, 1);
+}
+
+/* Основные цвета шрифтов */
+
+.white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.black {
+  color: rgba(49, 49, 49, 1);
+}
+
+.light-black {
+  color: rgba(100, 100, 100, 1);
+}
+
+.blue {
+  color: rgba(2, 90, 194, 1);
+}
+
+.light-blue {
+  color: rgba(235, 239, 255, 1);
+}
+
+.gray {
+  color: rgba(233, 233, 233, 1);
+}
+
+.dark-gray {
+  color: rgba(180, 180, 180, 1);
+}
+
+/* Основные цвета иконок */
+
+.i-white {
+  fill: rgba(255, 255, 255, 1) !important;
+}
+
+.i-black {
+  fill: rgba(49, 49, 49, 1) !important;
+}
+
+.i-blue {
+  fill: rgba(2, 90, 194, 1) !important;
+}
+
+.i-light-blue {
+  fill: rgba(235, 239, 255, 1) !important;
+}
+
+.i-gray {
+  fill: rgba(233, 233, 233, 1) !important;
+}
+
+/* Стили для текста */
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(80, 80, 80, 1);
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+/* Стили для цитаты */
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для ссылок */
+
+a {
+  font-size: 14px;
+  color: rgba(2, 90, 194, 1);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  color: rgba(5, 119, 252, 1) !important;
+  text-decoration: none !important;
+}
+
+/***************
+ Комплект стилей для кнопок.
+ Базовый клас + разное поведение
+ ****************/
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 0px;
+}
+
+/* Прозрачная кнопка для цветного фона */
+
+#buttonTrans {
+  border: 1px solid #fff;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+#buttonTrans:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  color: rgba(2, 90, 194, 1) !important;
+}
+
+#buttonTrans:hover #iconButton {
+  fill: rgba(2, 90, 194, 1);
+}
+
+/* Серая кнопка для белого фона */
+
+#buttonGray {
+  background: rgba(233, 233, 233, 1) !important;
+  color: rgba(49, 49, 49, 1);
+}
+
+#buttonGray:hover {
+  background: rgba(2, 90, 194, 1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+#buttonGray:hover #iconButton {
+  fill: rgba(255, 255, 255, 1);
+}
+
+/* Синяя кнопка для цветного фона */
+
+#buttonBlue {
+  background: rgba(2, 90, 194, 1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+#buttonBlue:hover {
+  background: rgba(71, 148, 239, 1) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+#buttonBlue:hover #iconButton {
+  fill: rgba(255, 255, 255, 1);
+}
+
+/* Кнопка в виде иконки */
+
+#buttonLink {
+  fill: rgba(49, 49, 49, 1);
+}
+
+#buttonLink:hover {
+  fill: rgba(2, 90, 194, 1);
+}
+
+/* Стили для заголовков */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700 !important;
+  line-height: 1.3em !important;
+  margin: 0 !important;
+}
+
+h1 {
+  font-size: 36px !important;
+}
+
+h2 {
+  font-size: 24px !important;
+  padding-bottom: 15px;
+}
+
+h3 {
+  font-size: 18px !important;
+}
+
+h4 {
+  font-size: 16px !important;
+}
+
+/* Стили для списков */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Стили для иконок */
+
+.iconLg,
+.iconMd,
+.iconSm,
+.iconXs {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.iconLg {
+  width: 40px;
+  height: 40px;
+}
+
+.iconMd {
+  width: 30px;
+  height: 30px;
+}
+
+.iconSm {
+  width: 20px;
+  height: 20px;
+}
+
+.iconXs {
+  width: 13px;
+  height: 13px;
+}
+
+/* Кастомные стили иконок */
+
+#iconButton,
+#iconStatic,
+#iconCategory {
+  margin-right: 10px;
+}
+
+/* Простые флексы */
+
+.flexContainerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/************************
+ Основные стили и
+ элементы сайта
+ ************************/
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 12px;
+}
+
+.logo,
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 38px;
+  background-color: #f4e028;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #313131;
+}
+
+.logo p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #313131;
+}
+
+.profile {
+  background-color: #eeeeee;
+  width: auto;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 0 10px 0 10px;
+  margin-right: 40px;
+}
+
+.profile:hover {
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.profile img {
+  margin-right: 10px;
+}
+
+.container_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-btn {
+  border: 0px;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: rgba(45, 45, 45, 1);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.menu-btn span:last-child {
+  margin-bottom: 0px;
+}
+
+.menu-btn:hover span {
+  background: rgba(244, 224, 40, 1);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  /* position: fixed; */
+  margin-top: -90px;
+  height: 100vh;
+  padding: 95px 12px 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element_menu {
+  width: 60px;
+  height: 42px;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.element_menu:hover {
+  background-color: #e0e0e0;
+}
+
+main {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+.content_container {
+  width: calc((100% - 100px) / 4);
+  max-width: 100%;
+  height: 225px;
+  background-color: #eeeeee;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+.prop_container {
+  padding: 0 0 18px 12px;
+}
+
+.prop_container p {
+  color: #cecece;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #313131;
+}

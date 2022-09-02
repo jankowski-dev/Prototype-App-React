@@ -1,43 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- <div id="root"></div> -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <header>
+      <div class="logo"><p>SN</p></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <div class="container_header" id="head">
+        <button class="profile" onclick="counter()">
+          <img src="img/profile.svg" />
+          <p>Michael Mitnick</p>
+        </button>
+
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <nav class="navigation">
+          <button class="element_menu">
+            <img src="img/home.svg" alt="" />
+          </button>
+
+          <button class="element_menu">
+            <img src="img/favorites.svg" alt="" />
+          </button>
+
+          <button class="element_menu">
+            <img src="img/last.svg" alt="" />
+          </button>
+
+          <button class="element_menu">
+            <img src="img/statistics.svg" alt="" />
+          </button>
+
+          <button class="element_menu">
+            <img src="img/subscribe.svg" alt="" />
+          </button>
+        </nav>
+        <button class="element_menu">
+          <img src="img/settings.svg" alt="" />
+        </button>
+      </aside>
+
+      <main>
+        <div class="prop_container">
+          <div class="title">Main news all day</div>
+          <p>Screencast your information</p>
+        </div>
+
+        <div class="wrapper">
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content_container">
+            <div class="short_content">
+              <div class="prop_short">
+                <div class="category_short">Javascript</div>
+                <div class="id_short">#3347</div>
+              </div>
+              <div class="title_short">Final script revision and reviews</div>
+              <div class="date_short">
+                <div class="date">Today, 01:41 PM</div>
+                <div class="views">2375 views</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
