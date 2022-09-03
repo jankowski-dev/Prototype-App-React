@@ -377,6 +377,15 @@ li {
  Основные стили и
  элементы сайта
  ************************/
+.main_container {
+display: flex;
+flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
 
 header {
   display: flex;
@@ -401,10 +410,18 @@ header {
   color: #313131;
 }
 
+.logo {
+  margin: 25px 0;
+}
+
 .logo p {
   font-size: 24px;
   font-weight: 700;
   color: #313131;
+}
+
+.logo_mobile {
+  display: none;
 }
 
 .profile {
@@ -454,21 +471,15 @@ header {
   background: rgba(244, 224, 40, 1);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
 .sticky {
   position: sticky;
   top: 0;
 }
 
 .sidebar {
-  /* position: fixed; */
-  margin-top: -90px;
+  /* margin-top: -90px; */
   height: 100vh;
-  padding: 95px 12px 0 12px;
+  padding: 0px 12px 0 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -569,6 +580,21 @@ main {
   font-weight: 3;
 }
 
-.short_content {
-
+a.content_container:hover {
+  background-color: #646464;
+  transition: .3s;
 }
+
+a.content_container:hover .id_short {
+  color: #CFCFCF;
+}
+
+a.content_container:hover .title_short {
+  color: #ffffff;
+  }
+
+  a.content_container:hover .date_short {
+    color: #CFCFCF;
+    }
+
+

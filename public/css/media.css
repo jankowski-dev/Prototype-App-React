@@ -17,6 +17,15 @@
   .sidebar {
     display: none;
   }
+  .logo {
+    margin: 0;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .logo_mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 540px) {
