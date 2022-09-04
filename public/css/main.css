@@ -387,36 +387,6 @@ flex-direction: row;
   flex-direction: column;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-}
-
-.sidebar {
-  height: 100vh;
-  padding: 0px 12px 0 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.element_menu {
-  width: 60px;
-  height: 42px;
-  background-color: #eeeeee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 25px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.element_menu:hover {
-  background-color: #e0e0e0;
-}
-
 main {
   width: 100%;
   padding-left: 10px;
