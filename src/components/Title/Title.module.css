@@ -1,0 +1,13 @@
+.prop_container {
+    padding: 0 0 18px 12px;
+  }
+  
+  .prop_container p {
+    color: #cecece;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #313131;
+  }

@@ -1,10 +1,11 @@
 
+import style from './Aside.module.css';
 
 const Aside = () => {
     return (
         <aside class="sidebar sticky">
         <nav class="navigation">
-          <div class="logo"><p>SN</p></div>
+          <div class={style.logo}><p>SN</p></div>
           <button class="element_menu">
             <img src="img/home.svg" alt="" />
           </button>

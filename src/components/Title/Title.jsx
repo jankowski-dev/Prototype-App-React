@@ -1,10 +1,10 @@
 
-
+import style from './Title.module.css';
 
 const Title = () => {
     return (
-        <div class="prop_container">
-        <div class="title">Main news all day</div>
+        <div class={style.prop_container}>
+        <div class={style.title}>Main news all day</div>
         <p>Screencast your information</p>
       </div>
     );

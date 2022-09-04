@@ -1,16 +1,17 @@
 
+import style from './Shortnews.module.css';
 
 const Shortnews = () => {
     return (
-        <a class="content_container" href="#">
-              <div class="prop_short">
-                <div class="category_short">Javascript</div>
-                <div class="id_short">#3347</div>
+        <a class={style.content_container} href="#">
+              <div class={style.prop_short}>
+                <div class={style.category_short}>Javascript</div>
+                <div class={style.id_short}>#3347</div>
               </div>
-              <div class="title_short">Final script revision and reviews</div>
-              <div class="date_short">
-                <div class="date">Today, 01:41 PM</div>
-                <div class="views">2375 views</div>
+              <div class={style.title_short}>Final script revision and reviews</div>
+              <div class={style.date_short}>
+                <div class={style.date}>Today, 01:41 PM</div>
+                <div class={style.views}>2375 views</div>
               </div>
           </a>
     );
