@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import style from "./Aside.module.css";
+
 
 const Aside = () => {
   return (
@@ -7,31 +9,35 @@ const Aside = () => {
         <div class={style.logo}>
           <p>SN</p>
         </div>
-        <button class={style.element_menu}>
+        <NavLink to="/home" className={classLink}>
           <img src="img/home.svg" alt="" />
-        </button>
+        </NavLink >
 
-        <button class={style.element_menu}>
+        <NavLink to="/favorites" className={classLink}>
           <img src="img/favorites.svg" alt="" />
-        </button>
+        </NavLink>
 
-        <button class={style.element_menu}>
+        <NavLink to="/last" className={classLink}>
           <img src="img/last.svg" alt="" />
-        </button>
+        </NavLink>
 
-        <button class={style.element_menu}>
+        <NavLink to="statistics" className={classLink}>
           <img src="img/statistics.svg" alt="" />
-        </button>
+        </NavLink>
 
-        <button class={style.element_menu}>
+        <NavLink to="subscribe" className={classLink}>
           <img src="img/subscribe.svg" alt="" />
-        </button>
+        </NavLink>
       </nav>
-      <button class={style.element_menu}>
+      <NavLink to="settings" className={classLink}>
         <img src="img/settings.svg" alt="" />
-      </button>
+      </NavLink>
     </aside>
   );
 };
+
+
+const classLink = ({ isActive }) => style.element_menu + " " + (isActive ? style.active : "");
+
 
 export default Aside;
