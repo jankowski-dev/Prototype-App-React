@@ -1,13 +1,13 @@
 import style from "./Shortnews.module.css";
 
-const Shortnews = () => {
+const Shortnews = (props) => {
   return (
     <a class={style.content_container} href="#">
       <div class={style.prop_short}>
-        <div class={style.category_short}>Javascript</div>
-        <div class={style.id_short}>#3347</div>
+        <div class={style.category_short}>{props.category}</div>
+        <div class={style.id_short}>#{props.id}</div>
       </div>
-      <div class={style.title_short}>Final script revision and reviews</div>
+      <div class={style.title_short}>{props.title}</div>
       <div class={style.date_short}>
         <div class={style.date}>Today, 01:41 PM</div>
         <div class={style.views}>2375 views</div>
