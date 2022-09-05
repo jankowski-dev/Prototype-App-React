@@ -378,8 +378,8 @@ li {
  элементы сайта
  ************************/
 .main_container {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .container {
@@ -398,9 +398,3 @@ main {
   flex-wrap: wrap;
   justify-content: stretch;
 }
-
-
-
-
-
-

@@ -1,9 +1,8 @@
-import './App.css';
-import Aside from './components/Aside/Aside';
-import Header from './components/Header/Header';
-import News from './components/News/News';
-import Title from './components/Title/Title';
-
+import "./App.css";
+import Aside from "./components/Aside/Aside";
+import Header from "./components/Header/Header";
+import News from "./components/News/News";
+import Title from "./components/Title/Title";
 
 function App() {
   return (
@@ -17,9 +16,7 @@ function App() {
         </div>
       </main>
     </div>
-
   );
 }
-
 
 export default App;
