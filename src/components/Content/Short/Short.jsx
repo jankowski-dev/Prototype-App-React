@@ -1,6 +1,6 @@
-import style from "./Shortnews.module.css";
+import style from "./Short.module.css";
 
-const Shortnews = (props) => {
+const Short = (props) => {
   return (
     <a class={style.content_container} href="#">
       <div class={style.prop_short}>
@@ -16,4 +16,4 @@ const Shortnews = (props) => {
   );
 };
 
-export default Shortnews;
+export default Short;
