@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import style from "./Aside.module.css";
 
-
 const Aside = () => {
   return (
     <aside class={style.sidebar}>
@@ -9,9 +8,9 @@ const Aside = () => {
         <div class={style.logo}>
           <p>SN</p>
         </div>
-        <NavLink to="/home" className={classLink}>
+        <NavLink to="/" className={classLink}>
           <img src="img/home.svg" alt="" />
-        </NavLink >
+        </NavLink>
 
         <NavLink to="/favorites" className={classLink}>
           <img src="img/favorites.svg" alt="" />
@@ -36,8 +35,7 @@ const Aside = () => {
   );
 };
 
-
-const classLink = ({ isActive }) => style.element_menu + " " + (isActive ? style.active : "");
-
+const classLink = ({ isActive }) =>
+  style.element_menu + " " + (isActive ? style.active : "");
 
 export default Aside;

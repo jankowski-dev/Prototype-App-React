@@ -3,33 +3,61 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-
-
 const state = {
-  news: [
+  last: [
     {
-      id: "3567",
+      id: "1",
       title: "Hello world 3",
       category: "Java",
     },
     {
-      id: "3354",
+      id: "2",
+      title: "Hello world 4",
+      category: "Rust",
+    },
+  ],
+  favorites: [
+    {
+      id: "2",
       title: "Hello world 4",
       category: "Rust",
     },
     {
-    id: "0000",
-    title: "Hello world 6",
-    category: "Python",
-  },
-  ]
-  }
-
+      id: "3",
+      title: "Hello world 6",
+      category: "Python",
+    },
+  ],
+  subscribe: [
+    {
+      id: "3",
+      title: "Hello world 6",
+      category: "Python",
+    },
+  ],
+  main: [
+    {
+      id: "1",
+      title: "Hello world 3",
+      category: "Java",
+    },
+    {
+      id: "2",
+      title: "Hello world 4",
+      category: "Rust",
+    },
+    {
+      id: "3",
+      title: "Hello world 6",
+      category: "Python",
+    },
+  ],
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App state={state}/>
+    <App state={state} />
   </React.StrictMode>
 );
 
