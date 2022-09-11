@@ -27,6 +27,9 @@ const Aside = () => {
         <NavLink to="subscribe" className={classLink}>
           <img src="img/subscribe.svg" alt="" />
         </NavLink>
+        <NavLink to="addpost" className={classLink}>
+          <img src="" alt="" />
+        </NavLink>
       </nav>
       <NavLink to="settings" className={classLink}>
         <img src="img/settings.svg" alt="" />

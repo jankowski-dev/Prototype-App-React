@@ -54,10 +54,14 @@ const state = {
   ],
 };
 
+let sendPost = (data) => {
+  state.main.push(data);
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App state={state} />
+    <App state={state} sendPost={sendPost} />
   </React.StrictMode>
 );
 

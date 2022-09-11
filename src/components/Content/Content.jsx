@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Title from "./Title/Title";
 import Posts from "./Posts/Posts";
+import Addpost from "./Posts/Addpost/Addpost";
 
 const Content = (props) => {
 
@@ -12,6 +13,7 @@ const Content = (props) => {
       <Route path="/subscribe" element={<Posts content={props.state.subscribe} />} />
       <Route path="/statistics" element={<Title />} />
       <Route path="/settings" element={<Title />} />
+      <Route path="/addpost" element={<Addpost sendPost={props.sendPost} />} />
     </Routes>
   );
 };
