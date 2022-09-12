@@ -13,7 +13,7 @@ const Content = (props) => {
       <Route path="/subscribe" element={<Posts content={props.state.subscribe} />} />
       <Route path="/statistics" element={<Title />} />
       <Route path="/settings" element={<Title />} />
-      <Route path="/addpost" element={<Addpost sendPost={props.sendPost} />} />
+      <Route path="/addpost" element={<Addpost sendPost={props.sendPost} default={props.state.defaultTitle} updateTextarea={props.updateTextarea} />} />
     </Routes>
   );
 };

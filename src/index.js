@@ -3,7 +3,20 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const state = {
+
+let rerender = () => {
+  return root.render(
+    <React.StrictMode>
+      <App state={state} sendPost={sendPost} updateTextarea={updateTextarea} />
+    </React.StrictMode>
+  );
+}
+
+
+
+let state = {
+  defaultTitle: 'First name',
+    
   last: [
     {
       id: "1",
@@ -56,12 +69,18 @@ const state = {
 
 let sendPost = (data) => {
   state.main.push(data);
+  rerender();
+}
+
+let updateTextarea = (data) => {
+  state.defaultTitle = data;
+  rerender();
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App state={state} sendPost={sendPost} />
+    <App state={state} sendPost={sendPost} updateTextarea={updateTextarea} />
   </React.StrictMode>
 );
 

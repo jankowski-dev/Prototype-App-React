@@ -15,8 +15,15 @@ let run = () => {
     }
 
     props.sendPost(data);
+    props.updateTextarea('');
     
 }
+
+let updateOnChange = () => {
+    let text = refTitle.current.value;
+    props.updateTextarea(text);
+}
+
     return (
         <div class="wrapper">
           <div>Id</div>
@@ -24,7 +31,7 @@ let run = () => {
           <div>Category</div>
           <input ref={refCategory} />
           <div>Title</div>
-          <textarea ref={refTitle} rows="5" />
+          <textarea ref={refTitle} rows="5" value={props.default} onChange={ updateOnChange } />
           <button onClick={ run }>Отправить</button>
         </div>
     );
