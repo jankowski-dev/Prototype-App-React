@@ -15,7 +15,6 @@ let run = () => {
     }
 
     props.sendPost(data);
-    props.updateTextarea('');
     
 }
 

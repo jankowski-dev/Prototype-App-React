@@ -69,6 +69,7 @@ let state = {
 
 let sendPost = (data) => {
   state.main.push(data);
+  updateTextarea('');
   rerender();
 }
 
