@@ -12,7 +12,12 @@ function App(props) {
         <main class="main_wrapper">
           <Header />
           <div class="container">
-            <Content state={props.state} sendPost={props.sendPost} updateTextarea={props.updateTextarea}/>
+            <Content
+              state={props.state}
+              dispatch={props.dispatch}
+              sendPost={props.sendPost}
+              updateTextarea={props.updateTextarea}
+            />
           </div>
         </main>
       </div>
