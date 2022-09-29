@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./redux/store";
+import store from "./redux/redux-store";
 import dispatch from "./redux/dispatch";
 
 export let rerender = () => {

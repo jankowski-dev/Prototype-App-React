@@ -1,5 +1,5 @@
-const SEND_MESSAGE = "SEND-MESSAGE";
-const UPDATE_TEXTAREA = "UPDATE-TEXTAREA";
+export const SEND_MESSAGE = "SEND-MESSAGE";
+export const UPDATE_TEXTAREA = "UPDATE-TEXTAREA";
 
 export let sendPostActionCreater = (data) => {
   return {
@@ -8,6 +8,8 @@ export let sendPostActionCreater = (data) => {
   };
 };
 
-export let updateTextareaActionCreater = (text) => {
-  return { type: UPDATE_TEXTAREA, data: text };
+export let updateTextareaActionCreater = (data) => {
+  return { 
+    type: UPDATE_TEXTAREA, 
+    data: data };
 };
