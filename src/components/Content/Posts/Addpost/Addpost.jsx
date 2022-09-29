@@ -1,6 +1,6 @@
 import React from "react";
-import { updateTextareaActionCreater } from "../../../..";
-import { sendPostActionCreater } from "../../../..";
+import { updateTextareaActionCreater } from "../../../../redux/actionCreaters";
+import { sendPostActionCreater } from "../../../../redux/actionCreaters";
 
 const Addpost = (props) => {
 
