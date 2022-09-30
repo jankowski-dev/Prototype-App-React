@@ -6,7 +6,6 @@ import { SEND_MESSAGE, UPDATE_TEXTAREA } from "./actionCreaters";
 // let formValue = {};
 
 export const postReducer = (state, action) => {
-  debugger;
   if (action.type === SEND_MESSAGE) {
     state.push(action.data);
   }
