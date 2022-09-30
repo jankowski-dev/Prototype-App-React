@@ -7,13 +7,13 @@ const Content = (props) => {
 
   return (
     <Routes>
-      <Route path="/" element={<Posts content={props.state.main} />} />
-      <Route path="/favorites" element={<Posts content={props.state.favorites} />} />
-      <Route path="/last" element={<Posts content={props.state.last} />} />
-      <Route path="/subscribe" element={<Posts content={props.state.subscribe} />} />
+      <Route path="/" element={<Posts content={props.state.articles.main} />} />
+      <Route path="/favorites" element={<Posts content={props.state.articles.favorites} />} />
+      <Route path="/last" element={<Posts content={props.state.articles.last} />} />
+      <Route path="/subscribe" element={<Posts content={props.state.articles.subscribe} />} />
       <Route path="/statistics" element={<Title />} />
       <Route path="/settings" element={<Title />} />
-      <Route path="/addpost" element={<Addpost dispatch={props.dispatch} sendPost={props.sendPost} default={props.state.defaultTitle} updateTextarea={props.updateTextarea} />} />
+      <Route path="/addpost" element={<Addpost dispatch={props.dispatch} default={props.state.defaultTitle} />} />
     </Routes>
   );
 };

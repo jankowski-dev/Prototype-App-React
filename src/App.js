@@ -15,8 +15,6 @@ function App(props) {
             <Content
               state={props.state}
               dispatch={props.dispatch}
-              sendPost={props.sendPost}
-              updateTextarea={props.updateTextarea}
             />
           </div>
         </main>

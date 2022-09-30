@@ -2,8 +2,8 @@ import { combineReducers, legacy_createStore as createStore } from "redux";
 import { postReducer, updateFormReducer } from "./reducer";
 
 let reducers = combineReducers({
-    mainPost: postReducer,
-    defaultForm: updateFormReducer,
+    main: postReducer,
+    defaultTitle: updateFormReducer,
 });
 
 let store = createStore(reducers);
