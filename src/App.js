@@ -13,7 +13,7 @@ function App(props) {
           <Header />
           <div class="container">
             <Content
-              state={props.state}
+              store={props.store}
               dispatch={props.dispatch}
             />
           </div>

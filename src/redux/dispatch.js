@@ -1,9 +1,10 @@
-import { postReducer, updateFormReducer } from "./reducer";
-import store from "./store";
+import { postReducer } from "./reducers/postReducer";
+import { updateFormReducer } from "./reducers/formReducer";
+import store from "./redux-store";
 
 let dispatch = (action) => {
-  store.state.articles.main = postReducer(store.state.articles.main, action);
-  store.state.defaultTitle = updateFormReducer(store.state.defaultTitle, action);
+  store.articles = postReducer(store.articles, action);
+  store.defaulTitle = updateFormReducer(store.defaulTitle, action);
 };
 
 export default dispatch;

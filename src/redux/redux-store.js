@@ -1,8 +1,9 @@
 import { combineReducers, legacy_createStore as createStore } from "redux";
-import { postReducer, updateFormReducer } from "./reducer";
+import { postReducer } from "./reducers/postReducer";
+import { updateFormReducer } from "./reducers/formReducer";
 
 let reducers = combineReducers({
-    main: postReducer,
+    articles: postReducer,
     defaultTitle: updateFormReducer,
 });
 
