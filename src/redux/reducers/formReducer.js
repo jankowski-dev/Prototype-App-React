@@ -1,16 +1,12 @@
-import { rerender } from "./../../index";
 import { UPDATE_TEXTAREA } from "./../actionCreaters";
 
 let initialState = {
-      defaultTitle: "First text",
+  defaultTitle: "First text",
 };
 
 export const updateFormReducer = (state = initialState, action) => {
-
-    if (action.type === UPDATE_TEXTAREA) {
-      state.defaultTitle = action.data;
-    }
-    
-    return state;
-    rerender();
-  };
+  if (action.type === UPDATE_TEXTAREA) {
+    state.defaultTitle = action.data;
+  }
+  return state;
+};

@@ -9,7 +9,8 @@ export let sendPostActionCreater = (data) => {
 };
 
 export let updateTextareaActionCreater = (data) => {
-  return { 
-    type: UPDATE_TEXTAREA, 
-    data: data };
+  return {
+    type: UPDATE_TEXTAREA,
+    data: data,
+  };
 };

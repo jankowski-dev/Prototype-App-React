@@ -4,16 +4,16 @@ import Posts from "./Posts/Posts";
 import Addpost from "./Posts/Addpost/Addpost";
 
 const Content = (props) => {
-  
+
   return (
     <Routes>
-      <Route path="/" element={<Posts content={props.store.getState().articles.main} />} />
-      <Route path="/favorites" element={<Posts content={props.store.getState().articles.favorites} />} />
-      <Route path="/last" element={<Posts content={props.store.getState().articles.last} />} />
-      <Route path="/subscribe" element={<Posts content={props.store.getState().articles.subscribe} />} />
+      <Route path="/" element={<Posts content={props.store.articles.main} />} />
+      <Route path="/favorites" element={<Posts content={props.store.articles.favorites} />} />
+      <Route path="/last" element={<Posts content={props.store.articles.last} />} />
+      <Route path="/subscribe" element={<Posts content={props.store.articles.subscribe} />} />
       <Route path="/statistics" element={<Title />} />
       <Route path="/settings" element={<Title />} />
-      <Route path="/addpost" element={<Addpost dispatch={props.dispatch} default={props.store.getState().defaultTitle.defaultTitle} />} />
+      <Route path="/addpost" element={<Addpost dispatch={props.dispatch} default={props.store.defaultTitle.defaultTitle} />} />
     </Routes>
   );
 };
