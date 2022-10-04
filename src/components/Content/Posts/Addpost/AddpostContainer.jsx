@@ -3,7 +3,8 @@ import { updateTextareaActionCreater } from "../../../../redux/actionCreaters";
 import { sendPostActionCreater } from "../../../../redux/actionCreaters";
 
 const Addpost = (props) => {
-    debugger;
+
+
     let refId = React.createRef();
     let refCategory = React.createRef();
     let refTitle = React.createRef();
@@ -12,6 +13,7 @@ const Addpost = (props) => {
         let data = {
             title: refTitle.current.value,
             category: refCategory.current.value,
+            id: refId.current.value,
         }
         props.dispatch(sendPostActionCreater(data));
         props.dispatch(updateTextareaActionCreater(''));

@@ -13,13 +13,13 @@ let reducers = combineReducers({
 
 let store = createStore(reducers);
 
-export let dispatch = (action) => {
+store.dispatch = (action) => {
   store.articles = postReducer(store.articles, action);
   store.defaultTitle = updateFormReducer(store.defaultTitle, action);
   rerender();
 };
 
-export let subscribe = (observer) => {
+store.subscribe = (observer) => {
   rerender = observer;
 };
 

@@ -4,7 +4,6 @@ import Posts from "./Posts/Posts";
 import Addpost from "./Posts/Addpost/Addpost";
 
 const Content = (props) => {
-
   return (
     <Routes>
       <Route path="/" element={<Posts content={props.store.articles.main} />} />
@@ -13,7 +12,7 @@ const Content = (props) => {
       <Route path="/subscribe" element={<Posts content={props.store.articles.subscribe} />} />
       <Route path="/statistics" element={<Title />} />
       <Route path="/settings" element={<Title />} />
-      <Route path="/addpost" element={<Addpost dispatch={props.dispatch} default={props.store.defaultTitle.defaultTitle} />} />
+      <Route path="/addpost" element={<Addpost store={props.store} dispatch={props.dispatch} default={props.store.defaultTitle.defaultTitle} />} />
     </Routes>
   );
 };

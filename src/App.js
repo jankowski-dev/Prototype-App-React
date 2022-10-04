@@ -12,10 +12,7 @@ function App(props) {
         <main class="main_wrapper">
           <Header />
           <div class="container">
-            <Content
-              store={props.store}
-              dispatch={props.dispatch}
-            />
+            <Content store={props.store} dispatch={props.dispatch} />
           </div>
         </main>
       </div>
