@@ -1,41 +1,29 @@
-import React from "react";
 import { updateTextareaActionCreater } from "../../../../redux/actionCreaters";
 import { sendPostActionCreater } from "../../../../redux/actionCreaters";
+import Addpost from "./Addpost";
+import { connect } from "react-redux";
 
-const Addpost = (props) => {
 
-
-    let refId = React.createRef();
-    let refCategory = React.createRef();
-    let refTitle = React.createRef();
-
-    let sendPost = () => {
-        let data = {
-            title: refTitle.current.value,
-            category: refCategory.current.value,
-            id: refId.current.value,
-        }
-        props.dispatch(sendPostActionCreater(data));
-        props.dispatch(updateTextareaActionCreater(''));
+const mapStateToProps = (state) => {
+    return {
+        default: state.defaultTitle.defaultTitle,
     }
-
-    let updateOnChange = () => {
-        let text = refTitle.current.value;
-        props.dispatch(updateTextareaActionCreater(text));
-    }
-
-    return (
-        <div class="wrapper">
-            <div>Id</div>
-            <input ref={refId} />
-            <div>Category</div>
-            <input ref={refCategory} />
-            <div>Title</div>
-            <textarea ref={refTitle} rows="5" value={props.default} onChange={updateOnChange} />
-            <button onClick={sendPost}>Отправить</button>
-        </div>
-    );
 }
 
+const mapDispatchToProps = (dispatch) => {
 
-export default Addpost;
+    return {
+        updateOnChange: (text) => {
+            dispatch(updateTextareaActionCreater(text));
+        },
+        sendPost: (data) => {
+            dispatch(sendPostActionCreater(data));
+            dispatch(updateTextareaActionCreater(''));
+        }
+    }
+}
+
+const AddpostContainer = connect(mapStateToProps, mapDispatchToProps)(Addpost);
+
+
+export default AddpostContainer;

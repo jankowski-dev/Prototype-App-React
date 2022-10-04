@@ -1,25 +1,23 @@
 import React from "react";
-import { updateTextareaActionCreater } from "../../../../redux/actionCreaters";
-import { sendPostActionCreater } from "../../../../redux/actionCreaters";
 
 const Addpost = (props) => {
-    debugger;
+
     let refId = React.createRef();
     let refCategory = React.createRef();
     let refTitle = React.createRef();
 
-    let sendPost = () => {
-        let data = {
-            title: refTitle.current.value,
-            category: refCategory.current.value,
-        }
-        props.dispatch(sendPostActionCreater(data));
-        props.dispatch(updateTextareaActionCreater(''));
+    const updateOnChange = () => {
+        let text = refTitle.current.value;
+        props.updateOnChange(text);
     }
 
-    let updateOnChange = () => {
-        let text = refTitle.current.value;
-        props.dispatch(updateTextareaActionCreater(text));
+    const sendPost = () => {
+        let text = {
+            title: refTitle.current.value,
+            category: refCategory.current.value,
+            id: refId.current.value
+        }
+        props.sendPost(text);
     }
 
     return (
