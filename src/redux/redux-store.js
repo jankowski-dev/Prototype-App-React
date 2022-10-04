@@ -2,10 +2,6 @@ import { combineReducers, legacy_createStore as createStore } from "redux";
 import { postReducer } from "./reducers/postReducer";
 import { updateFormReducer } from "./reducers/formReducer";
 
-let rerender = () => {
-  return true;
-};
-
 let reducers = combineReducers({
   articles: postReducer,
   defaultTitle: updateFormReducer,
@@ -14,13 +10,10 @@ let reducers = combineReducers({
 let store = createStore(reducers);
 
 store.dispatch = (action) => {
-  store.articles = postReducer(store.articles, action);
-  store.defaultTitle = updateFormReducer(store.defaultTitle, action);
-  rerender();
+  store.articles = postReducer(store.getState().articles, action);
+  store.defaultTitle = updateFormReducer(store.getState().defaultTitle, action);
 };
 
-store.subscribe = (observer) => {
-  rerender = observer;
-};
+window.store = store;
 
 export default store;
