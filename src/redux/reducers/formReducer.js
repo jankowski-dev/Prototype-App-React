@@ -5,7 +5,6 @@ let initialState = {
 };
 
 export const updateFormReducer = (state = initialState, action) => {
-  debugger;
   if (action.type === UPDATE_TEXTAREA) {
     state.defaultTitle = action.data;
   }
