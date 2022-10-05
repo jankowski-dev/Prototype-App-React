@@ -5,11 +5,10 @@ let initialState = {
 };
 
 export const updateFormReducer = (state = initialState, action) => {
-  debugger;
+  
+  let stateCopy = { ...state };
   if (action.type === UPDATE_TEXTAREA) {
-    let stateCopy = { ...state };
     stateCopy.defaultTitle = action.data;
-    return stateCopy;
   }
-  return state;
+  return stateCopy;
 };

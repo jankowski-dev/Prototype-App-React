@@ -10,8 +10,9 @@ let reducers = combineReducers({
 let store = createStore(reducers);
 
 store.dispatch = (action) => {
-  store.articles = postReducer(store.getState().articles, action);
-  store.defaultTitle = updateFormReducer(store.getState().defaultTitle, action);
+  // debugger;
+  store.articles = postReducer(store.articles, action);
+  store.defaultTitle = updateFormReducer(store.defaultTitle, action);
 };
 
 window.store = store;
