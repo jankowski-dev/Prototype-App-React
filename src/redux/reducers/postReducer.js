@@ -52,7 +52,7 @@ let initialState = {
 };
 
 export const postReducer = (state = initialState, action) => {
-  debugger;
+  // debugger;
   let stateCopy = { ...state };
   stateCopy.main = { ...state.main };
   if (action.type === SEND_MESSAGE) {
