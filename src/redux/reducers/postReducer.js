@@ -1,4 +1,5 @@
 import { SEND_MESSAGE } from "./../actionCreaters";
+import store from "./../store";
 
 let initialState = {
   last: [
@@ -52,11 +53,11 @@ let initialState = {
 };
 
 export const postReducer = (state = initialState, action) => {
-  // debugger;
   let stateCopy = { ...state };
-  stateCopy.main = { ...state.main };
+  stateCopy.main = [ ...state.main ];
   if (action.type === SEND_MESSAGE) {
     stateCopy.main.push(action.data);
+    return stateCopy;
   }
-  return stateCopy;
+  return state;
 };

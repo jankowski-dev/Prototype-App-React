@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
     return {
-        default: state.defaultTitle.defaultTitle,
+        default: state.default.defaultTitle,
     }
 }
 
