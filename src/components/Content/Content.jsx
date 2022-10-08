@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Title from "./Title/Title";
 import AddpostContainer from "./Posts/Addpost/AddpostContainer";
 import PostsContainer from "./Posts/PostsContainer";
+import UsersContainer from "./Users/UsersContainer";
 
 const Content = (props) => {
   return (
@@ -11,7 +12,7 @@ const Content = (props) => {
       <Route path="/last" element={<PostsContainer />} />
       <Route path="/subscribe" element={<PostsContainer />} />
       <Route path="/statistics" element={<Title />} />
-      <Route path="/settings" element={<Title />} />
+      <Route path="/users" element={<UsersContainer/>} />
       <Route path="/addpost" element={<AddpostContainer />} />
     </Routes>
   );

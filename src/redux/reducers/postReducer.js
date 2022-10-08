@@ -1,5 +1,4 @@
 import { SEND_MESSAGE } from "./../actionCreaters";
-import store from "./../store";
 
 let initialState = {
   last: [

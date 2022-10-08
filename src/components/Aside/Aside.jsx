@@ -30,6 +30,9 @@ const Aside = () => {
         <NavLink to="addpost" className={classLink}>
           <img src="" alt="" />
         </NavLink>
+        <NavLink to="users" className={classLink}>
+          <img src="img/subscribe.svg" alt="" />
+        </NavLink>
       </nav>
       <NavLink to="settings" className={classLink}>
         <img src="img/settings.svg" alt="" />
