@@ -1,5 +1,4 @@
-import { sendPostAC } from "../../../../redux/reducers/postReducer";
-import { updateTextareaAC } from "../../../../redux/reducers/formReducer";
+import { sendPostAC, updateTextareaAC } from "../../../../redux/reducers/postReducer";
 import Addpost from "./Addpost";
 import { connect } from "react-redux";
 
@@ -7,7 +6,7 @@ import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
     return {
-        default: state.default.defaultTitle,
+        default: state.articles.default,
     }
 }
 

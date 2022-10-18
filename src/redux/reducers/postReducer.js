@@ -1,4 +1,5 @@
 const SEND_MESSAGE = "SEND_MESSAGE";
+const UPDATE_TEXTAREA = "UPDATE_TEXTAREA";
 
 let initialState = {
   last: [
@@ -49,22 +50,34 @@ let initialState = {
       category: "Python",
     },
   ],
+  default: "Input text...",
 };
 
 export const postReducer = (state = initialState, action) => {
   let stateCopy = { ...state };
-  stateCopy.main = [...state.main];
 
   if (action.type === SEND_MESSAGE) {
+    stateCopy.main = [...state.main];
     stateCopy.main.push(action.data);
-    return stateCopy;
   }
-  return state;
+
+  if (action.type === UPDATE_TEXTAREA) {
+    stateCopy.default = action.data;
+  }
+
+  return stateCopy;
 };
 
 export let sendPostAC = (data) => {
   return {
     type: SEND_MESSAGE,
+    data: data,
+  };
+};
+
+export let updateTextareaAC = (data) => {
+  return {
+    type: UPDATE_TEXTAREA,
     data: data,
   };
 };

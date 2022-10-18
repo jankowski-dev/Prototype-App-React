@@ -10,6 +10,6 @@ const User = (props) => {
       <div class={style.title_short}>{props.status}</div>
     </a>
   );
-};
+}
 
 export default User;

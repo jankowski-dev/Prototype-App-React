@@ -3,10 +3,11 @@ import User from "./User/User";
 import axios from "axios";
 
 const Users = (props) => {
-    debugger;
-    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        props.setUsers(response.data.items);
-    })
+    if (props.content.allUsers.length === 0) {
+        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+            props.setUsers(response.data.items);
+        })
+    }
 
     return (
         <div className="wrapper">
