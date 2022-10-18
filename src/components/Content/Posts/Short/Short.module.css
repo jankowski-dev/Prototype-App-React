@@ -12,6 +12,11 @@
   align-items: flex-start;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .prop_short {
   width: 100%;
   display: flex;
