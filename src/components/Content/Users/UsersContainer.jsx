@@ -1,7 +1,7 @@
 
 import Users from "./Users";
 import { connect } from "react-redux";
-import { setUsersAC } from "../../../redux/reducers/usersReduser";
+import { setUsersAC, preloaderAC } from "../../../redux/reducers/usersReduser";
 
 const mapStateToProps = (state) => {
     return {
@@ -14,6 +14,9 @@ const mapDispatchToProps = (dispatch) => {
         setUsers: (users) => {
             dispatch(setUsersAC(users));
         },
+        runPreloader: (data) => {
+            dispatch(preloaderAC(data));
+        }
     }
 }
 

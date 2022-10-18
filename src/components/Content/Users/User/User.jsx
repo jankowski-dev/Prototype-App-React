@@ -7,7 +7,7 @@ const User = (props) => {
         <div className={style.category_short}>{props.name}</div>
         <div className={style.id_short}>#{props.id}</div>
       </div>
-      <img src={props.image} className={style.image}></img>
+      <img src={props.image} className={style.image} alt="#" />
       <div className={style.title_short}>{props.status}</div>
     </a>
   );
