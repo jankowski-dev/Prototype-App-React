@@ -3,6 +3,7 @@ const SET_USERS = "SET_USERS";
 let initialState = { allUsers: [], bannedUsers: [], favoritesUsers: [] };
 
 export const usersReducer = (state = initialState, action) => {
+  debugger;
   let stateCopy = { ...state };
 
   if (action.type === SET_USERS) {
@@ -10,7 +11,7 @@ export const usersReducer = (state = initialState, action) => {
     return stateCopy;
   }
 
-  return state;
+  return stateCopy;
 };
 
 export let setUsersAC = (data) => {
