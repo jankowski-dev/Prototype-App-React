@@ -1,6 +1,7 @@
 
 import Users from "./Users";
 import { connect } from "react-redux";
+import { setUsersAC } from "../../../redux/reducers/usersReduser";
 
 const mapStateToProps = (state) => {
     return {
@@ -10,7 +11,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        setUsers: (users) => {
+            dispatch(setUsersAC(users));
+        },
     }
 }
 

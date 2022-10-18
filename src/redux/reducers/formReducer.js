@@ -1,4 +1,4 @@
-import { UPDATE_TEXTAREA } from "./../actionCreaters";
+const UPDATE_TEXTAREA = "UPDATE_TEXTAREA";
 
 let initialState = {
   defaultTitle: "First text",
@@ -13,4 +13,9 @@ export const updateFormReducer = (state = initialState, action) => {
   return state;
 };
 
-
+export let updateTextareaAC = (data) => {
+  return {
+    type: UPDATE_TEXTAREA,
+    data: data,
+  };
+};

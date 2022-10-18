@@ -1,7 +1,8 @@
-import { updateTextareaActionCreater } from "../../../../redux/actionCreaters";
-import { sendPostActionCreater } from "../../../../redux/actionCreaters";
+import { sendPostAC } from "../../../../redux/reducers/postReducer";
+import { updateTextareaAC } from "../../../../redux/reducers/formReducer";
 import Addpost from "./Addpost";
 import { connect } from "react-redux";
+
 
 
 const mapStateToProps = (state) => {
@@ -14,11 +15,11 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         updateOnChange: (text) => {
-            dispatch(updateTextareaActionCreater(text));
+            dispatch(updateTextareaAC(text));
         },
         sendPost: (data) => {
-            dispatch(sendPostActionCreater(data));
-            dispatch(updateTextareaActionCreater(''));
+            dispatch(sendPostAC(data));
+            dispatch(updateTextareaAC(''));
         }
     }
 }

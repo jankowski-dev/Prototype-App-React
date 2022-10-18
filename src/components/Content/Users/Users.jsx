@@ -1,11 +1,17 @@
 
 import User from "./User/User";
+import axios from "axios";
 
 const Users = (props) => {
     debugger;
+    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+        props.setUsers(response.data.items);
+    })
+
     return (
-        <div class="wrapper">
-            {props.content.users.map((el) => {
+        <div className="wrapper">
+
+            {props.content.allUsers.map((el) => {
                 return <User id={el.id} name={el.name} status={el.status} />;
             })};
         </div>
