@@ -39,28 +39,28 @@ export const usersReducer = (state = initialState, action) => {
   return stateCopy;
 };
 
-export let setUsersAC = (data) => {
+export let setUsers = (data) => {
   return {
     type: SET_USERS,
     data: data,
   };
 };
 
-export let preloaderAC = (data) => {
+export let preloader = (data) => {
   return {
     type: RUN_PRELOADER,
     data: data,
   };
 };
 
-export let setCurrentPageAC = (data) => {
+export let setCurrentPage = (data) => {
   return {
     type: SET_CURRENT_PAGE,
     data: data,
   };
 };
 
-export let setTotalCountsAC = (data) => {
+export let setTotalCounts = (data) => {
   return {
     type: SET_TOTAL_COUNTS,
     data: data,
