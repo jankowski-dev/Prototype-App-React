@@ -9,7 +9,7 @@ let initialState = {
   favoritesUsers: [],
   preloader: false,
   totalCounts: 0,
-  pageSize: 12,
+  pageSize: 100,
   currentPage: 1,
 };
 

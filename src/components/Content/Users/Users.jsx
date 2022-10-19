@@ -42,9 +42,9 @@ class Users extends React.Component {
 
         this.props.runPreloader(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.content.pageSize}&page=${this.props.content.currentPage}`).then(response => {
-            this.props.runPreloader(false);
             this.props.setUsers(response.data.items);
             this.props.setTotalCounts(response.data.totalCount);
+            this.props.runPreloader(false);
         });
     }
 
@@ -52,9 +52,9 @@ class Users extends React.Component {
         this.props.setCurrentPage(pageNumber)
         this.props.runPreloader(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.content.pageSize}&page=${pageNumber}`).then(response => {
-            this.props.runPreloader(false);
             this.props.setUsers(response.data.items);
             this.props.setTotalCounts(response.data.totalCount);
+            this.props.runPreloader(false);
         });
     }
 
@@ -75,7 +75,10 @@ class Users extends React.Component {
             <div className="wrapper">
                 {this.props.content.preloader ? <div className={style.preloader}><img src={preloader} alt="#" /></div> : false}
                 {this.props.content.allUsers.map((el) => {
-                    return <User id={el.id} name={el.name} status={el.status} image={el.photos.small} />;
+                    debugger;
+                    if (el.photos.small) {
+                        return <User id={el.id} name={el.name} status={el.status} image={el.photos.small} />;
+                    }
                 })};
 
             </div>
