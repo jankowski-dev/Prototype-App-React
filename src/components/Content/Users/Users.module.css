@@ -18,7 +18,34 @@
   background-color: blue;
 }
 
+.pagWrapper {
+  display: flex;
+  height: auto;
+  padding: 20px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.pagination {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(85, 85, 85);
+  margin: 15px;
+  cursor: pointer;
+}
+
+.pagination span {
+  cursor: pointer;
+}
+
+.pagination:hover {
+  background-color: rgb(105, 105, 105);
+}
+
 .activeLink {
-  font-weight: bold;
-  font-size: 1.2em;
+  background-color: rgb(190, 2, 65);
 }
