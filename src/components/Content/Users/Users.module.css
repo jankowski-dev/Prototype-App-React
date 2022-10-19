@@ -17,3 +17,8 @@
 .button:hover {
   background-color: blue;
 }
+
+.activeLink {
+  font-weight: bold;
+  font-size: 1.2em;
+}

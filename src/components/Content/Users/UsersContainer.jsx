@@ -1,7 +1,7 @@
 
 import Users from "./Users";
 import { connect } from "react-redux";
-import { setUsersAC, preloaderAC } from "../../../redux/reducers/usersReduser";
+import { setUsersAC, preloaderAC, setCurrentPageAC, setTotalCountsAC } from "../../../redux/reducers/usersReduser";
 
 const mapStateToProps = (state) => {
     return {
@@ -16,6 +16,12 @@ const mapDispatchToProps = (dispatch) => {
         },
         runPreloader: (data) => {
             dispatch(preloaderAC(data));
+        },
+        setCurrentPage: (data) => {
+            dispatch(setCurrentPageAC(data));
+        },
+        setTotalCounts: (data) => {
+            dispatch(setTotalCountsAC(data));
         }
     }
 }
