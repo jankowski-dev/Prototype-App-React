@@ -3,6 +3,7 @@ import Title from "./Title/Title";
 import AddpostContainer from "./Posts/Addpost/AddpostContainer";
 import PostsContainer from "./Posts/PostsContainer";
 import UsersContainer from "./Users/UsersContainer";
+import UserContainer from "./Users/User/UserContainer";
 
 const Content = (props) => {
   return (
@@ -14,6 +15,7 @@ const Content = (props) => {
       <Route path="/statistics" element={<Title />} />
       <Route path="/users" element={<UsersContainer/>} />
       <Route path="/addpost" element={<AddpostContainer />} />
+      <Route path="/profile" element={<UserContainer />} />
     </Routes>
   );
 };

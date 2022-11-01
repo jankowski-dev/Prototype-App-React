@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import style from "./../../Posts/Short/Short.module.css";
 
 const User = (props) => {
@@ -7,7 +8,7 @@ const User = (props) => {
         <div className={style.category_short}>{props.name}</div>
         <div className={style.id_short}>#{props.id}</div>
       </div>
-      <img src={props.image} className={style.image} alt="#" />
+     <NavLink to="/profile"><img src={props.image} className={style.image} alt="#" /></NavLink>
       <div className={style.title_short}>{props.status}</div>
     </a>
   );
