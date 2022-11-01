@@ -15,7 +15,7 @@ const Content = (props) => {
       <Route path="/statistics" element={<Title />} />
       <Route path="/users" element={<UsersContainer/>} />
       <Route path="/addpost" element={<AddpostContainer />} />
-      <Route path="/profile" element={<UserContainer />} />
+      <Route path="/profile/:userId" element={<UserContainer />} />
     </Routes>
   );
 };

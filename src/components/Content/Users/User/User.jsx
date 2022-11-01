@@ -8,7 +8,7 @@ const User = (props) => {
         <div className={style.category_short}>{props.name}</div>
         <div className={style.id_short}>#{props.id}</div>
       </div>
-     <NavLink to="/profile"><img src={props.image} className={style.image} alt="#" /></NavLink>
+     <NavLink to={`${"/profile/" + props.id}`}><img src={props.image} className={style.image} alt="#" /></NavLink>
       <div className={style.title_short}>{props.status}</div>
     </a>
   );
