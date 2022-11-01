@@ -13,5 +13,5 @@ const User = (props) => {
     </a>
   );
 }
-
+// {`${"/profile/" + props.id}`}
 export default User;
