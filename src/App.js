@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 import Aside from "./components/Aside/Aside";
 import Header from "./components/Header/Header";
 import Content from "./components/Content/Content";

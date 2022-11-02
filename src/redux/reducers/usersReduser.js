@@ -2,6 +2,7 @@ const SET_USERS = "SET_USERS";
 const RUN_PRELOADER = "RUN_PRELOADER";
 const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 const SET_TOTAL_COUNTS = "SET_TOTAL_COUNTS";
+const SET_USER_PROFILE = "SET_USER_PROFILE";
 
 let initialState = {
   allUsers: [],
@@ -11,6 +12,7 @@ let initialState = {
   totalCounts: 0,
   pageSize: 100,
   currentPage: 1,
+  userProfile: {},
 };
 
 export const usersReducer = (state = initialState, action) => {
@@ -34,6 +36,10 @@ export const usersReducer = (state = initialState, action) => {
   if (action.type === SET_TOTAL_COUNTS) {
     stateCopy.totalCounts = action.data;
     return stateCopy;
+  }
+
+  if (action.type === SET_USER_PROFILE) {
+    stateCopy.userProfile = action.data;
   }
 
   return stateCopy;
@@ -66,3 +72,10 @@ export let setTotalCounts = (data) => {
     data: data,
   };
 };
+
+export let setUserProfile = (data) => {
+  return {
+    type: SET_USER_PROFILE,
+    data: data,
+  }
+}
