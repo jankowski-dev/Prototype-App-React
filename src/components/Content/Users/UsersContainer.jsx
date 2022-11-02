@@ -11,23 +11,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         setUsers: (users) => {
-//             dispatch(setUsersAC(users));
-//         },
-//         preloader: (data) => {
-//             dispatch(preloaderAC(data));
-//         },
-//         setCurrentPage: (data) => {
-//             dispatch(setCurrentPageAC(data));
-//         },
-//         setTotalCounts: (data) => {
-//             dispatch(setTotalCountsAC(data));
-//         }
-//     }
-// }
-
 
 const UsersContainer = connect(mapStateToProps, {
     setUsers,
