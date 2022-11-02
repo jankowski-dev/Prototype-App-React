@@ -1,9 +1,9 @@
 import { combineReducers, legacy_createStore as createStore } from "redux";
-import { postReducer } from "./reducers/postReducer";
+import { articlesReducer } from "./reducers/articlesReducer";
 import { usersReducer } from "./reducers/usersReduser";
 
 let reducers = combineReducers({
-  articles: postReducer,
+  articles: articlesReducer,
   users: usersReducer,
 });
 
