@@ -11,7 +11,6 @@ class ArticlesAPI extends React.Component {
         let requestAJAX = "https://newsdata.io/api/1/news?apikey=pub_1296967894235cdfe7b80e28d985b11833d7b&q=tech&country=us&category=technology"
         axios.get(requestAJAX).then(response => {
             console.log(response.data.results);
-            debugger;
             this.props.setList(response.data.results);
         });
     }

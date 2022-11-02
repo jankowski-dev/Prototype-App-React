@@ -11,8 +11,8 @@ const ArticlesShort = (props) => {
       </div>
       <div class={style.title_short}>{props.title}</div>
       <div class={style.date_short}>
-        <div class={style.date}>Today, 01:41 PM</div>
-        <div class={style.views}>2375 views</div>
+        <div class={style.date}>{props.pubDate}</div>
+        <div class={style.views}><a href={props.link} className="">link</a></div>
       </div>
     </a>
     );
