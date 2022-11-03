@@ -1,22 +1,19 @@
 const SET_ARTICLES_LIST = "SET_ARTICLES_LIST";
 const SET_ARTICLES_ITEM = "SET_ARTICLES_ITEM";
 
-
 let initialState = {
+  articlesList: [],
 
-    articlesList: [],
-
-    articlesItem: {
-        title: null,
-        pubDate: null,
-        link: null,
-        creator: null,
-        description: null,
-        content: null,
-        category: null,
-        language: null,
-
-    }
+  articlesItem: {
+    title: null,
+    pubDate: null,
+    link: null,
+    creator: null,
+    description: null,
+    content: null,
+    category: null,
+    language: null,
+  },
 };
 
 export const articlesReducer = (state = initialState, action) => {
@@ -43,8 +40,8 @@ export let setArticlesList = (data) => {
 };
 
 export let setArticlesItem = (data) => {
-    return {
-      type: SET_ARTICLES_ITEM,
-      data: data,
-    };
+  return {
+    type: SET_ARTICLES_ITEM,
+    data: data,
   };
+};

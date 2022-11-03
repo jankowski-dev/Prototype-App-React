@@ -1,11 +1,14 @@
-import Articles from "./Articles";
+import ArticlesShort from "./ArticlesShort";
 import { connect } from "react-redux";
 import axios from "axios";
 import React from "react";
-import { setArticlesItem, setArticlesList } from "../../../../redux/reducers/articlesReducer";
+import { setArticlesItem, setArticlesList } from "../../../redux/reducers/articlesReducer";
 
 
 class ArticlesAPI extends React.Component {
+
+
+
 
     componentDidMount() {
         let requestAJAX = "https://newsdata.io/api/1/news?apikey=pub_1296967894235cdfe7b80e28d985b11833d7b&q=tech&country=us&category=technology"
@@ -16,15 +19,13 @@ class ArticlesAPI extends React.Component {
     }
 
     render() {
-        return <Articles {...this.props} />
-        
+        return (<div class="wrapper">
+            {this.props.articlesList.map((el) => {
+                return <ArticlesShort {...el} />;
+            })};
+        </div>)
     }
-
-
 }
-
-
-
 
 const mapStateToProps = (state) => {
     return {
@@ -43,7 +44,6 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 }
-
 
 const ArticlesContainer = connect(mapStateToProps, mapDispatchToProps)(ArticlesAPI);
 

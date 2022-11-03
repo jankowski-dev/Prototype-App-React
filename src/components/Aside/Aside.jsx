@@ -16,23 +16,18 @@ const Aside = () => {
           <img src="img/favorites.svg" alt="" />
         </NavLink>
 
-        <NavLink to="/last" className={classLink}>
-          <img src="img/last.svg" alt="" />
-        </NavLink>
-
         <NavLink to="statistics" className={classLink}>
           <img src="img/statistics.svg" alt="" />
+        </NavLink>
+
+        <NavLink to="users" className={classLink}>
+          <img src="img/last.svg" alt="" />
         </NavLink>
 
         <NavLink to="subscribe" className={classLink}>
           <img src="img/subscribe.svg" alt="" />
         </NavLink>
-        <NavLink to="addpost" className={classLink}>
-          <img src="" alt="" />
-        </NavLink>
-        <NavLink to="users" className={classLink}>
-          <img src="img/subscribe.svg" alt="" />
-        </NavLink>
+
       </nav>
       <NavLink to="settings" className={classLink}>
         <img src="img/settings.svg" alt="" />
