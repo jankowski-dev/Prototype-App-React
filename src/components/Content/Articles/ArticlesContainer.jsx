@@ -1,12 +1,58 @@
 import ArticlesShort from "./ArticlesShort";
 import { connect } from "react-redux";
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import { setArticlesItem, setArticlesList, setCategory } from "../../../redux/reducers/articlesReducer";
 import style from "./Articles.module.css"
 
 
-class ArticlesAPI extends React.Component {
+
+const ArticlesAPI = (props) => {
+    let count = 0;
+
+    // axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=technology&page=2`)
+    // .then(response => {
+    //     console.log(response.data);
+    //     // props.setList(response.data);
+    //     });
+
+
+
+    // useEffect(() => {
+    //     axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=technology&page=2`).then(response => {
+    //         props.setList(response.data.items);
+    //     });
+    //   }, [] );
+
+      useEffect(() => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${props.articlesCategory.activeCategory}&page=2`).then(response => {
+            props.setList(response.data.items);
+        });
+      }, [props.articlesCategory.activeCategory]);
+
+    return (
+        <>
+                <div className={style.filter}>
+                    <div className={style.filterItem} onClick={() => { props.setActiveCategory(props.articlesCategory.general) }}>{props.articlesCategory.general}</div>
+                    <div className={style.filterItem} onClick={() => { props.setActiveCategory(props.articlesCategory.technology) }}>{props.articlesCategory.technology}</div>
+                    <div className={style.filterItem} onClick={() => { props.setActiveCategory(props.articlesCategory.science) }}>{props.articlesCategory.science}</div>
+                    <div className={style.filterItem} onClick={() => { props.setActiveCategory(props.articlesCategory.business) }}>{props.articlesCategory.business}</div>
+                </div>
+
+                <div className="wrapper">
+                    {<ArticlesShort/>}
+                    {props.UserList.map((el) => {
+                        return <ArticlesShort {...el} />;
+                    })};
+                </div>
+            </>
+    )
+}
+
+
+
+
+class ArticlesAP extends React.Component {
 
 
     componentDidMount() {
@@ -42,6 +88,7 @@ const mapStateToProps = (state) => {
         articlesList: state.articles.articlesList,
         articlesItem: state.articles.articlesItem,
         articlesCategory: state.articles.articlesCategory,
+        UserList: state.articles.allUsers,
     }
 }
 

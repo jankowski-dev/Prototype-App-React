@@ -17,19 +17,28 @@ let initialState = {
   },
 
   articlesCategory: {
-    general: "general",
-    technology: "technology",
-    science: "science",
-    business: "business",
-    activeCategory: "business",
+    general: 1,
+    technology: 2,
+    science: 3,
+    business: 4,
+    activeCategory: 10,
+    pageSize: 30,
+    currentPage: 1,
   },
+
+  allUsers: [],
 };
 
 export const articlesReducer = (state = initialState, action) => {
   let stateCopy = { ...state };
 
+  // if (action.type === SET_ARTICLES_LIST) {
+  //   stateCopy.articlesList = action.data;
+  //   return stateCopy;
+  // }
+
   if (action.type === SET_ARTICLES_LIST) {
-    stateCopy.articlesList = action.data;
+    stateCopy.allUsers = action.data;
     return stateCopy;
   }
 
