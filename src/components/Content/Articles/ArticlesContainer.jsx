@@ -8,7 +8,10 @@ import style from "./Articles.module.css"
 
 
 const ArticlesAPI = (props) => {
-    let count = 0;
+    
+
+
+
 
     // axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=technology&page=2`)
     // .then(response => {
@@ -25,6 +28,10 @@ const ArticlesAPI = (props) => {
     //   }, [] );
 
       useEffect(() => {
+
+
+
+
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${props.articlesCategory.activeCategory}&page=2`).then(response => {
             props.setList(response.data.items);
         });
